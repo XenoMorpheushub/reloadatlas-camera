@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:
-      - name: Récupérer les sources
+      - name: Recuperer les sources
         uses: actions/checkout@v5
 
       - name: Installer Python 3.11
@@ -22,6 +22,11 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
+
+      - name: Outils de compilation
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libtool libtool-bin autoconf automake patchelf
 
       - name: Installer buildozer
         run: |
