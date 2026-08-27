@@ -1,4 +1,4 @@
-name: Build APK ReloadAtlas Camera
+          sudo apt-get install -y libtool libtool-bin libltdl-dev autoconf automake patchelfname: Build APK ReloadAtlas Camera
 
 on:
   push:
